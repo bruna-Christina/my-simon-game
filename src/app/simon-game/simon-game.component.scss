@@ -1,0 +1,22 @@
+@import "~_style-variables.scss";
+.footer{
+  padding: 10px;
+}
+.btn-disable {
+  pointer-events:none;
+}
+.btn-activated {
+  opacity: $opacity-value;
+}
+#btn-green{
+  background-color: $md-color-600-green;
+}
+#btn-red{
+  background-color: $md-color-600-red;
+}
+#btn-blue{
+  background-color: $md-color-600-blue;
+}
+#btn-yellow{
+  background-color: $md-color-600-yellow;
+}

@@ -1,0 +1,27 @@
+<audio [id]="getWrongAudioId()" src="assets/simon_sound_wrong.mp3"></audio>
+<!--
+<ng-template ngFor let-color [ngForOf]="getColors()">
+  <audio [id]="getColorSoundId(color)" [src]="getColorSound(color)"></audio>
+  <button [id]="getColorBtnId(color)" class='btn' [class.btn-disable]="disableColorBtn" (click)="onBtnColor(color)">{{color}}</button>
+</ng-template>
+<button mat-raised-button color="primary" [disabled]="disableStartBtn" (click)="onBtnStart()">
+  Start <mat-icon *ngIf="!isGameShowing">play_arrow</mat-icon>
+</button>
+<span>Score: {{gameScore}}</span>
+-->
+<!---->
+<app-loading [loading]="loading"></app-loading>
+<div class="flex-container v-flex full-height align-center">
+  <div class="flex-item full-width flex-container">
+    <ng-template ngFor let-color [ngForOf]="getColors()">
+        <audio [id]="getColorSoundId(color)" [src]="getColorSound(color)"></audio>
+        <button mat-raised-button [id]="getColorBtnId(color)" class='flex-item' [class.btn-disable]="disableColorBtn" (click)="onBtnColor(color)"></button>
+      </ng-template>
+  </div>
+  <div class="footer">
+    <button mat-raised-button color="primary" [disabled]="disableStartBtn" (click)="onBtnStart()">
+      Start <mat-icon>play_arrow</mat-icon>
+    </button>
+    <span>Score: {{gameScore}}</span>
+  </div>
+</div>

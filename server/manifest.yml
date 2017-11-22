@@ -1,0 +1,3 @@
+applications:
+- name: my-simon-game
+  memory: 256M

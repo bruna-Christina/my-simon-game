@@ -1,0 +1,32 @@
+<app-loading [loading]="loading"></app-loading>
+<mat-card>
+  <p class="align-text-center" *ngIf="scores && scores.length === 0">No Scores saved.</p>
+  <mat-list *ngIf="scores && scores.length > 0">
+    <ng-template ngFor let-score [ngForOf]="scores" let-i="index">
+      <ng-template [ngIf]="i === 0">
+        <h1 matSubheader>
+          <mat-icon>grade</mat-icon>
+          <span>Top 10</span>
+        </h1>
+        <mat-divider></mat-divider>
+        <mat-divider></mat-divider>
+      </ng-template>
+      <ng-template [ngIf]="i !== 0 && (i % 10) === 0 ">
+        <h1 matSubheader>
+          <mat-icon>grade</mat-icon>
+          <span>Top {{10 * (i/10) + 10}}</span>
+        </h1>
+        <mat-divider></mat-divider>
+        <mat-divider></mat-divider>
+      </ng-template>
+      <mat-list-item>
+        <mat-icon matListIcon>people</mat-icon>
+        <h3 matLine>Name: <strong>{{score.name}}</strong></h3>
+        <p matLine>
+          Score: <strong>{{score.score}}</strong>
+        </p>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+    </ng-template>
+  </mat-list>
+</mat-card>

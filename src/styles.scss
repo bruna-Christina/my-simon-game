@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import url('//fonts.googleapis.com/icon?family=Material+Icons');
+@import url('//fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic');
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+button{
+  outline: none;
+  border: none
+}
+.full-height{
+  height: 100%;
+}
+.full-width{
+  width: 100%;
+}
+.flex-container{
+  display: flex;
+}
+.v-flex{
+  flex-direction: column;
+}
+.h-flex{
+  flex-direction: row;
+}
+.flex-item{
+  flex: 1;
+  overflow: auto;
+}
+.align-center{
+  align-items:center;
+}
